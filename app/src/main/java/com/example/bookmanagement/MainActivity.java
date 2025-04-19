@@ -89,12 +89,12 @@ public class MainActivity extends AppCompatActivity implements BookAdapter.OnBoo
         TextView tvDialogBookId = view.findViewById(R.id.tvDialogBookId);
         TextInputEditText etBookTitle = view.findViewById(R.id.etBookTitle);
         TextInputEditText etBookAuthor = view.findViewById(R.id.etBookAuthor);
-        TextView tvPublishDate = view.findViewById(R.id.tvPublishDate);
         CheckBox cbScience = view.findViewById(R.id.cbScience);
         CheckBox cbNovel = view.findViewById(R.id.cbNovel);
         CheckBox cbChildren = view.findViewById(R.id.cbChildren);
         
         // Set up date picker
+        TextInputEditText tvPublishDate = view.findViewById(R.id.tvPublishDate);
         final Calendar calendar = Calendar.getInstance();
         final Date[] selectedDate = {calendar.getTime()};
         
@@ -125,9 +125,10 @@ public class MainActivity extends AppCompatActivity implements BookAdapter.OnBoo
             if (selectedDate[0] != null) {
                 cal.setTime(selectedDate[0]);
             }
-            
+
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     MainActivity.this,
+                    R.style.DatePickerDialogTheme,
                     (view1, year, month, dayOfMonth) -> {
                         Calendar newDate = Calendar.getInstance();
                         newDate.set(year, month, dayOfMonth);

@@ -10,119 +10,84 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
 
+        <!-- Book ID and Title/Author section -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mã sách: "
-                android:textStyle="bold" />
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
 
             <TextView
                 android:id="@+id/tvBookId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="001" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tên sách: "
-                android:textStyle="bold" />
+                android:layout_gravity="center_vertical"
+                android:text="001"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvBookTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tên sách" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tác giả: "
+                android:layout_gravity="center_vertical"
+                android:text="Tên sách"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvBookAuthor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tác giả" />
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_vertical"
+                android:text="Tác giả"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <!-- Categories section -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:orientation="horizontal">
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cbScience"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ngày xuất bản: "
-                android:textStyle="bold" />
+                android:text="Khoa học"
+                android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/tvPublishDate"
+            <CheckBox
+                android:id="@+id/cbNovel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="01/01/2023" />
+                android:text="Tiểu thuyết"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/cbChildren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thiếu nhi"
+                android:textSize="12sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
+        <!-- Publish date section -->
+        <TextView
+            android:id="@+id/tvPublishDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:text="01/01/2023"
+            android:textSize="12sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Thể loại:"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/cbScience"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Khoa học" />
-
-                <CheckBox
-                    android:id="@+id/cbNovel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tiểu thuyết" />
-
-                <CheckBox
-                    android:id="@+id/cbChildren"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Thiếu nhi" />
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -1,5 +1,6 @@
 package com.example.bookmanagement.database;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -203,6 +204,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // Helper method to convert cursor to Book object
+    @SuppressLint("Range")
     private Book cursorToBook(Cursor cursor) {
         Book book = new Book();
         book.setId(cursor.getInt(cursor.getColumnIndex(COLUMN_ID)));

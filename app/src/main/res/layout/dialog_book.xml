@@ -49,25 +49,21 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal">
+        android:hint="Ngày xuất bản">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ngày xuất bản: "
-            android:textStyle="bold" />
-
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tvPublishDate"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Chọn ngày"
-            android:textColor="@android:color/holo_blue_dark" />
-    </LinearLayout>
+            android:focusable="false"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:clickable="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="wrap_content"
